@@ -20,10 +20,10 @@ public class BroadcastWidget extends AppWidgetProvider {
 
         // Construct the RemoteViews object
         RemoteViews views = new RemoteViews(context.getPackageName(), R.layout.broadcast_widget);
-
+        // Construct an Intent which is pointing this class.
         Intent intent = new Intent(context, BroadcastWidget.class);
         intent.setAction(ACTION_SIMPLEAPPWIDGET);
-
+        // And this time we are sending a broadcast with getBroadcast
         PendingIntent pendingIntent = PendingIntent.getBroadcast(context, 0, intent,
                 PendingIntent.FLAG_UPDATE_CURRENT);
 
@@ -45,10 +45,13 @@ public class BroadcastWidget extends AppWidgetProvider {
         super.onReceive(context, intent);
         if (ACTION_SIMPLEAPPWIDGET.equals(intent.getAction())) {
             mCounter++;
+            // Construct the RemoteViews object
             RemoteViews views = new RemoteViews(context.getPackageName(), R.layout.broadcast_widget);
             views.setTextViewText(R.id.tvWidget, Integer.toString(mCounter));
+            // This time we dont have widgetId. Reaching our widget with that way.
             ComponentName appWidget = new ComponentName(context, BroadcastWidget.class);
             AppWidgetManager appWidgetManager = AppWidgetManager.getInstance(context);
+            // Instruct the widget manager to update the widget
             appWidgetManager.updateAppWidget(appWidget, views);
         }
     }
