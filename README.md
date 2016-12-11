@@ -7,6 +7,7 @@ Widget Creation Steps with a basic example(Opening a website on widget clicked)
 ![simplewidgetexample](https://cloud.githubusercontent.com/assets/8283200/21082139/25ac4456-bfe6-11e6-877f-b8733eeb5ebb.gif)
 ## BroadcastWidgetExample
 Broadcast Widget Example(Counting clicks on widget)
+
 ![broadcastwidgetexample](https://cloud.githubusercontent.com/assets/8283200/21082143/3805ee72-bfe6-11e6-85e0-98b5012ad080.gif)
 ## ConfigurableWidgetExample
 Configurable Widget Example(Getting data before creation and using the data when it’s clicked)
