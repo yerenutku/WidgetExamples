@@ -1,5 +1,5 @@
 # WidgetExamples
-There is 4 example of Android Widgets based on this **[article][https://medium.com/@erenutku/android-widgets-ad3d166458d3]
+There is 4 example of Android Widgets based on this article : https://medium.com/@erenutku/android-widgets-ad3d166458d3
 
 
 ## SimpleWidgetExample 
