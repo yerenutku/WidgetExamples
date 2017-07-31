@@ -41,6 +41,7 @@ public class ConfigurableWidgetConfigureActivity extends Activity {
             finish();
             return;
         }
+        btAdd = (Button) findViewById(R.id.btAdd);
         btAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

@@ -23,11 +23,11 @@ public class UpdateService extends Service {
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
-
+        // generates random number
         Random random = new Random();
         int randomInt = random.nextInt(100);
         String lastUpdate = "R: "+randomInt;
-
+        // Reaches the view on widget and displays the number
         RemoteViews view = new RemoteViews(getPackageName(), R.layout.updating_widget);
         view.setTextViewText(R.id.tvWidget, lastUpdate);
         ComponentName theWidget = new ComponentName(this, UpdatingWidget.class);

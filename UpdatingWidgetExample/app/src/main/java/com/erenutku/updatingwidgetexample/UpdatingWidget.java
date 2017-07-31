@@ -25,7 +25,7 @@ public class UpdatingWidget extends AppWidgetProvider {
             service = PendingIntent.getService(context, 0, i, PendingIntent.FLAG_CANCEL_CURRENT);
         }
         manager.setRepeating(AlarmManager.ELAPSED_REALTIME, SystemClock.elapsedRealtime(), 60000, service);
-        //if you need to call your service less then 60 sec
+        //if you need to call your service less than 60 sec
         //answer is here:
         //http://stackoverflow.com/questions/29998313/how-to-run-background-service-after-every-5-sec-not-working-in-android-5-1
         Log.d("UpdatingWidget: ","onUpdate");
